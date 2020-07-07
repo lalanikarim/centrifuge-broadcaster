@@ -10,6 +10,7 @@ use Lcobucci\JWT\Builder;
 use Lcobucci\JWT\Signer\Hmac\Sha256;
 use Lcobucci\JWT\Signer\Key;
 use Lcobucci\JWT\Token;
+use Carbon\Carbon;
 
 class Centrifuge implements CentrifugeContract
 {
@@ -275,7 +276,7 @@ class Centrifuge implements CentrifugeContract
 		$signer = new Sha256();
 
 		$token = (new Builder())->issuedBy($this->config['token_issuer'])
-			->expiresAt(now()->getTimestamp() + $this->config['token_ttl'])
+			->expiresAt(Carbon::now()->getTimestamp() + $this->config['token_ttl'])
             ->withClaim('sub', $userId)
 			->getToken($signer, new Key($this->config['secret']));
 
