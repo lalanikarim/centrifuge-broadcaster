@@ -1,7 +1,7 @@
 {
     "name": "luisozparr/centrifuge-broadcaster",
     "type": "library",
-    "description": "Centrifuge broadcaster for laravel >= 5.6",
+    "description": "Centrifuge broadcaster for laravel >= 5.6.x",
     "keywords": ["laravel", "centrifuge", "centrifugo", "broadcaster", "websocket"],
     "license": "MIT",
     "authors": [
@@ -16,6 +16,10 @@
         {
             "name": "LuisOzuna",
             "email": "lgozuna@gmail.com"
+        },
+        {
+            "name": "Wolfernand",
+            "email": "wolfernand@gmail.com"
         }
     ],
     "homepage": "https://github.com/emprove/centrifuge-broadcaster",
@@ -24,15 +28,15 @@
         "source": "https://github.com/emprove/centrifuge-broadcaster"
     },
     "require": {
-        "php": ">=7.1",
-        "guzzlehttp/guzzle": "^6.2",
+        "php": ">=7.1|>=7.2",
+        "guzzlehttp/guzzle": "^6.3|^6.3",
         "predis/predis": "^1.1",
-        "illuminate/broadcasting": "^5.3",
-        "lcobucci/jwt": "3.3.*"  
+        "illuminate/broadcasting": "^5.3|^7.0",
+        "lcobucci/jwt": "3.3.*"
     },
     "require-dev": {
-        "orchestra/testbench": "^3.3",
-        "phpunit/phpunit": "^5.7|^6.1"
+        "orchestra/testbench": "3.3|^5.0",
+        "phpunit/phpunit": "^5.7|^6.1|^8.5"
     },
     "autoload": {
         "psr-4": {
